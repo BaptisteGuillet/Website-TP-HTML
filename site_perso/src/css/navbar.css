@@ -1,0 +1,86 @@
+@import 'https://fonts.googleapis.com/css?family=Ubuntu+Condensed';
+
+
+a {
+  text-decoration: none;
+}
+
+nav {
+    margin-left: 100px; 
+    margin-top: 2em;
+    margin-bottom: 2em;
+    height: 100%;
+    font-family: 'Ubuntu Condensed', sans-serif;
+  }
+
+.categories {
+ 
+  display: inline-block;
+  max-width: 320px;
+  position: relative;
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  background-color: rgba(231, 231, 231, 0.6);
+  box-shadow: 8px 8px 0 0px rgba(0, 0, 0, 0.25);
+}
+
+nav {
+  padding-top: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    position: relative;
+    transition-duration: 0.3s;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+nav ul li a:hover {
+    transform: translateX(5px);
+}
+
+nav ul li a:before {
+    pointer-events: none;
+    position: absolute;
+    transition-duration: 0.3s;
+    transition-property: left;
+}
+
+nav ul li a:hover:before {
+    left: -15px;
+}
+
+nav ul li a.home {
+  border-left: 50px solid #2f3542;
+  color: #2f3542;
+}
+
+nav ul li a.presentation {
+  border-left: 50px solid #57606f;
+  color: #2f3542;
+}
+
+nav ul li a.me {
+  border-left: 50px solid #747d8c;
+  color: #2f3542;
+}
+
+nav ul li a.github {
+  border-left: 50px solid #a4b0be;
+  color: #2f3542;
+}
+
+nav ul li a.lycee {
+  border-left: 50px solid #ced6e0;
+  color: #2f3542;
+}
