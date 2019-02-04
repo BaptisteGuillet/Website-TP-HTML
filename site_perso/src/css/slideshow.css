@@ -1,0 +1,48 @@
+ 
+  .container {
+    max-width: 1100px; /*Largeur maxi de l'élément.*/
+    position: relative; /*Positionnement de l'élément.*/
+    margin: auto; /*Marges extérieures de l'élément.*/
+  }
+  
+  .prev,
+  .next {
+    cursor: pointer; /*Forme du curseur pour la souris.*/
+    position: absolute; /*Positionnement de l'élément.*/
+    padding:10px; /*Marges intérieures de l'élément*/
+    color: white; /*Couleur de l'avant plan (texte, par exemple).*/
+    border-radius: 3px; /*Définition de l'angle des cards*/
+    font-size: 16px; /*Taille des caractères.*/
+    top: 45%; /*Position supérieure de l'élément.*/
+  }
+  
+  .next {
+    right: 0; /*Position droite de l'élément.*/
+  }
+  
+  .prev:hover,
+  .next:hover {
+    color: black; /*Couleur de l'avant plan*/
+    background-color: white; /*Couleur de l'arrière plan*/
+  }
+  h3{
+    margin-top:10px; /*Marge extérieure du haut de l'élément.*/
+  }
+  
+  
+  @media only screen and (max-width: 500px) {
+    .prev,
+    .next {
+      font-size: 12px; /*Taille des caractères.*/
+      top: 40%; /*Position supérieure de l'élément.*/
+    }
+  }
+  
+  @media only screen and (max-width: 200px) {
+    .prev,
+    .next {
+      font-size: 9px; /*Taille des caractères.*/
+      top: 30%; /*Position supérieure de l'élément.*/
+    }
+  }
+  

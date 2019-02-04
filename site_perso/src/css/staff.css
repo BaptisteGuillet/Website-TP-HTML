@@ -1,8 +1,8 @@
 .container-staff {
-    margin-left: 100px; 
+    margin-left: 100px; /*Marge extérieure de gauche de l'élément.*/
 }
 
 h4.title {
-    font-size: 25px;
-    text-decoration: underline;
+    font-size: 25px; /*Taille des caractères.*/
+    text-decoration: underline; /*Soulignement du texte.*/
 }

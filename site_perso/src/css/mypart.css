@@ -1,0 +1,8 @@
+.columns {
+    margin: auto; /*Marges extérieures de l'élément.*/
+    width: 50%; /*Largeur de l'élément.*/
+}
+
+.title {
+    font-size: 20px; /*Taille des caractères.*/
+}

@@ -1,51 +1,51 @@
 @import 'https://fonts.googleapis.com/css?family=Ubuntu+Condensed';
 
 .card-container {
-    text-align: center;
-    margin-top: 5%;
-    
-    font-family: 'Ubuntu Condensed', sans-serif;
+    text-align: center; /*Détermine l'alignement horizontal du texte à l'intérieur d'un élément.*/
+    margin-top: 5%; /*Marge extérieure du haut de l'élément.	*/
+    font-family: 'Ubuntu Condensed', sans-serif; /*Police de caractères.*/
   }
   
   .c-card {
-    display: inline-block;
-    border-radius: 3px;
-    width: 100%;
-    max-width: 350px;
-    margin: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: left;
-    background: #fff;
-    box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
+    block-size: border-box; /*Définition de la taille des box.*/
+    display: inline-block; /*Façon d'afficher un élément.*/
+    border-radius: 3px; /*Définition de l'angle des cards*/
+    width: 100%; /*Largeur de l'élément.*/
+    max-width: 350px; /*Largeur maximale de l'élément.*/
+    margin: 20px; /*Marges extérieures de l'élément.*/
+    cursor: pointer; /*Forme du curseur pour la souris.*/
+    transition: all 0.3s ease; /*animation de la card*/
+    text-align: left; /*Détermine l'alignement horizontal du texte à l'intérieur d'un élément.*/
+    background: #fff; /*Propriétés de l'arrière-plan.*/
+    box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2); /**/
   }
   .c-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px); /*Translation sur l'axe vertical vers le haut de 5px.*/
+    box-shadow: 0 20px 20px -15px rgba(0, 0, 0, 0.3); /*ombrage des cards*/
   }
   .c-card__image {
-    max-width: 100%;
+    max-width: 100%; /*Largeur maximale de l'élément.*/
   }
   .c-card__body {
-    padding: 30px;
+    padding: 30px; /*Marges intérieures de l'élément.*/
   }
   .c-card__title {
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
+    font-size: 15px; /*Taille des caractères.*/
+    font-weight: 700; /*Mise en gras ou extra-gras (extra-bold).*/
+    line-height: 1.2; /*Hauteur de ligne*/
+    margin: 0; /*Marges extérieures de l'élément.*/
+    padding: 0; /*Marges intérieures de l'élément.*/
+    text-transform: uppercase; /*Contrôle la capitalisation (majuscules/minuscules) du texte d'un élément.*/
   }
   .c-card__subtitle {
-    font-size: 13px;
-    margin-top: 5px;
-    padding: 0;
+    font-size: 13px; /*Taille des caractères.*/
+    margin-top: 5px; /*Marge extérieure du haut de l'élément.*/
+    padding: 0; /*Marges intérieures de l'élément.*/
   }
   .c-card__intro {
-    margin-bottom: 0;
+    margin-bottom: 0; /*Marge extérieure du bas de l'élément.*/
   }
   .c-card__footer {
-    padding: 20px;
-    border-top: 1px solid #ddd;
+    padding: 20px; /*Marges intérieures de l'élément.*/
+    border-top: 1px solid #ddd; /*Caractéristiques de la bordure du haut.*/
   }

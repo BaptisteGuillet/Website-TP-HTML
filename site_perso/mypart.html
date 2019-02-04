@@ -7,12 +7,14 @@
     <title>Baptiste GUILLET</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
 
     
     <link rel="stylesheet" type="text/css" media="screen" href="src/css/main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="src/css/cards.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="src/css/navbar.css" />
-    <script src="src/js/index.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="src/css/mypart.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="src/css/slideshow.css" />
+
 
 </head>
 <body>
@@ -21,21 +23,145 @@
     <nav>
         <ul>
             <li><a class="categories home" href="index.html"><strong>Accueil</strong></a></li>
-            <li><a class="categories presentation" href="project.html"><strong>Présentation / FAQ</strong></a></li>
+            <li><a class="categories presentation" href="project.html"><strong>Présentation</strong></a></li>
             <li><a class="categories me" href="mypart.html"><strong>Site Web du projet</strong></a></li>
-            <li><a class="categories github" href="https://github.com/BaptisteGuillet/project-tp-html"><strong>Github du TP</strong></a></li>
+            <li><a class="categories github" href="https://github.com/BaptisteGuillet/Website-TP-HTML"><strong>Github du TP</strong></a></li>
             <li><a class="categories lycee" href="https://www.lyceecharlescoulomb.fr/"><strong>Lycée Charles A. Coulomb</strong></a></li>
         </ul>
     </nav>
     
+    <!-- Slide Show start-->
+    <div class="container">
+        <div class="image-container">
+          <img id="image" src="src/img/slideshow/index.PNG" alt="index" style="width: 1100px;height: 300;" />
+        </div>
+        <a class=" btn prev" style="background-color:#70a1ff;">&#10094;</a> <a class="btn next" style="background-color:#70a1ff;">&#10095;</a>
+    </div>
+    <!-- Slide Show end-->
 
-    
+    <!-- Présentation site projet / outils -->
+    <div class="columns">
+        <!-- Présentation Bulma -->
+        <div class="column">
+            <div class="card">
+                <div class="card-content">
+                    <p class="title">
+                        Bulma est un framework CSS gratuit et open source basé sur Flexbox CSS Layout. Il me facilitera la tâche pour le design du site du projet.
+                    </p>
+                    <p class="subtitle">
+                        Bulma - Framework CSS
+                    </p>
+                </div>
+                <footer class="card-footer">
+                    <p class="card-footer-item">
+                        <span>
+                            La <a href="https://bulma.io/documentation/">Documentation</a>
+                        </span>
+                    </p>
+                    <p class="card-footer-item">
+                        <span>
+                            Télécharger <a href="https://github.com/jgthms/bulma/releases/download/0.7.2/bulma-0.7.2.zip">Bulma v0.7.2</a>
+                        </span>
+                    </p>
+                </footer>
+            </div>
+        </div>
+        <!-- Présentation VSC -->
+        <div class="column">
+            <div class="card">
+                <div class="card-content">
+                    <p class="title">
+                        Visual Studio Code est un IDE, que je vais utiliser pour réaliser le site-web. Cette IDE est pratique et simple de compréhension.
+                    </p>
+                    <p class="subtitle">
+                        Visual Studio Code
+                    </p>
+                </div>
+                <footer class="card-footer">
+                    <p class="card-footer-item">
+                        <span>
+                            Le <a href="https://code.visualstudio.com/">Site Web</a>
+                        </span>
+                    </p>
+                    <p class="card-footer-item">
+                        <span>
+                            Télécharger <a href="https://code.visualstudio.com/Download">Visual Studio Code</a>
+                        </span>
+                    </p>
+                </footer>
+            </div>
+        </div>
+        <!-- objectifs du site -->
+        <div class="column">
+            <div class="card">
+                <div class="card-content">
+                    <p class="title">
+                        Le site servira à changer le code de la serrure, d'avoir les différentes actions réalisées, d'avoir un aperçu des zones sous surveillances. Ce site sera utilisé par un administrateur.
+                    </p>
+                    <p class="subtitle">
+                        Baptiste GUILLET
+                    </p>
+                </div>
+                <footer class="card-footer">
+                    <p class="card-footer-item">
+                        <span>
+                            Le <a href="https://github.com/BaptisteGuillet/serrure">Github</a>
+                        </span>
+                    </p>
+                    <p class="card-footer-item">
+                        <span>
+                            Des questions ? <a href="mailto:baptiste.guillet@free.fr">ici</a>
+                        </span>
+                    </p>
+                </footer>
+            </div>
+        </div>
+    </div>
 
-    <!-- Footer -->
-    <footer>
+    <script>
+    (function() {
+    //Tableau d'images pour slideshow
+    const images = ["src/img/slideshow/index.PNG", "src/img/slideshow/admin.PNG", "src/img/slideshow/logs.PNG"];
+    //setup un compteur
+    let counter = 0;
+    //écoutez le bouton prev et les prochains événements
+    let btns = document.querySelectorAll(".btn");
 
-    </footer> 
+    let image = document.getElementById("image");
+    //console.log(image);
+    //action sur chaque bouton
+    btns.forEach(function(btn) {
+        btn.addEventListener("click", function(event) {
+        let value = event.target;
+        // console.log(value);
 
-        
+        if (value.classList.contains("prev")) {
+            // console.log("prev clicked");
+            counter--;
+            //faire une boucle en continu
+            if (counter < 0) {
+            counter = images.length - 1;
+            }
+            // console.log(counter);
+            //modèles littéraux pour obtenir la valeur d'image correspondante
+            image.src = `${images[counter]}`;
+        }
+        if (value.classList.contains("next")) {
+            // console.log("next clicked");
+            counter++;
+            //faire une boucle en continu
+            if (counter > images.length - 1) {
+            counter = 0;
+            }
+            // console.log(counter);
+            //modèles littéraux pour obtenir la valeur d'image correspondante
+            image.src = `${images[counter]}`;
+        }
+        });
+    });
+    })();
+
+
+    </script>
 </body>
 </html>

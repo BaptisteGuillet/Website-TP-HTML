@@ -1,21 +1,18 @@
 * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    user-select: none;
-    font-family: 'Ubuntu Condensed', sans-serif;
+    box-sizing: border-box; /*Définition de la taille des box.*/
+    user-select: none; /*On ne peut pas copié.*/
+    font-family: 'Ubuntu Condensed', sans-serif; /*Choix de police d'écriture.*/
   }
   
   html {
-    width: 100%;
-    background-color: #70a1ff;
+    width: 100%; /*Largeur de l'élément.*/
+    background-color: #70a1ff; /*Couleur du fond de l'élèment.*/
   }
   
   .title-project {
-    text-align: center;
-    margin-top: 3%;
-    color: #2f3542;
-    font-family: 'Ubuntu Condensed', sans-serif;
-    font-size:200%;
+    text-align: center; /*Détermine l'alignement horizontal du texte à l'intérieur d'un élément.*/
+    margin-top: 3%; /*Marge extérieure du haut de l'élément.*/
+    color: #2f3542; /*Couleur du texte.*/
+    font-family: 'Ubuntu Condensed', sans-serif; /*Choix de police d'écriture.*/
+    font-size:200%; /*Taille des caractères.*/
   }
- 
